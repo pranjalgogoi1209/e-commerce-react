@@ -1,15 +1,14 @@
 import React from 'react'
 import {BrowserRouter, Routes, Route} from 'react-router-dom' 
-import Testing from './Testing'
-import { Footer } from './components/Index'
+import { Navbar, Footer, Sidebar } from './components'
 import { Home, About, Cart, Products, SingleProduct, Error } from './pages'
 
 
 export default function App() {
   return (
     <BrowserRouter>
-      <Testing/>
-
+      <Navbar/>
+      <Sidebar/>
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/about' element={<About/>}></Route>
@@ -18,6 +17,7 @@ export default function App() {
         <Route path='/products/:id' element={<SingleProduct/>}></Route>
         <Route path='/*' element={<Error/>}></Route>
       </Routes>
+      <Footer/>
     </BrowserRouter>
   )
 }
