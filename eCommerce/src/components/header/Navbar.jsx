@@ -48,8 +48,8 @@ const NavContainer = styled.nav`
     background-image: url('https://th.bing.com/th?id=OIF.OHg%2bXqEw4LSA5IuFCmT6TQ&pid=ImgDet&rs=1');
     background-size: cover;
     background-position: center;
-    width: 14vw;
-    height: 14vw;
+    width: 12vw;
+    height: 12vw;
     border-radius: 100vw;
   }
 
@@ -80,8 +80,8 @@ const NavContainer = styled.nav`
   .nav-links{
     display: flex;
     list-style-type: none;
-    gap: 5vw;
-    font-size: 3vw;
+    gap: 3vw;
+    font-size: 2.5vw;
     a{
       text-decoration: none;
       color: black;
@@ -90,6 +90,11 @@ const NavContainer = styled.nav`
       }
       }
 
+  }
+
+  /* The class is from CartButtons component */
+  .cart-btn-wrapper{
+      display: flex;
   }
  }
 
