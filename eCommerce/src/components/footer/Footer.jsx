@@ -1,11 +1,25 @@
 import React from 'react'
+import styled from 'styled-components'
 
-function Footer() {
+export default function Footer() {
   return (
-    <div>
-      I am Footer
-    </div>
+    <Wrapper>
+      <h5>
+        <span>&copy;</span>
+        <span>{new Date().getFullYear()}</span>
+        <span> BuyS-Mart All rights reserved</span>
+      </h5>
+    </Wrapper>
   )
 }
 
-export default Footer
+const Wrapper = styled.footer`
+  @media (min-width:900px) {
+    background-color: black;
+    color: white;
+    height: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`

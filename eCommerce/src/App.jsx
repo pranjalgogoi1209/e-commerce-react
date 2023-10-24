@@ -17,7 +17,7 @@ export default function App() {
         <Route path='/products/:id' element={<SingleProduct/>}></Route>
         <Route path='/*' element={<Error/>}></Route>
       </Routes>
-      {/* <Footer/> */}
+      <Footer/>
     </BrowserRouter>
   )
 }
