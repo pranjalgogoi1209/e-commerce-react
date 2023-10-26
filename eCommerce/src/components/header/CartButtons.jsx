@@ -27,7 +27,64 @@ export default function CartButtons() {
   }
 
 const Wrapper = styled.div`
+  /* FOR SMALL SCREEN */
+  .cart-btn{
+      display: flex;
+      align-items: center;  
+      gap: 1vw;
+      color: red;
+      text-decoration: none;
+      p{
+        font-size: 5vw;
+      }
+    }
 
+    .cart-container {
+        display: flex;
+        width: 7vw;
+        height: 7vw;
+        align-items: center;
+        svg {
+          font-size: 6vw;
+          z-index: 1;
+          position: absolute;
+        }
+    }
+
+    .cart-value {
+      background-color: pink;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 3vw;
+      width: 3vw;
+      border-radius: 100vw;
+      padding: 0.5vw;
+      z-index: 2;
+      position: absolute;
+      margin-left: 4vw;
+      margin-bottom: 4vw;
+      font-size: 2.3vw;
+    }
+
+    .auth-btn{
+      display: flex;
+      align-items: center;  
+      gap: 1vw;
+      color: red;
+      text-decoration: none;
+      p{
+        font-size: 5vw;
+      }
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .auth-container{
+      font-size: 6vw;
+      margin-top: 0.5vw;
+    }
 
 
 

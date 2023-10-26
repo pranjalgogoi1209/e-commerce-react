@@ -22,7 +22,7 @@ export default function Navbar() {
           <ul className='nav-links'>
             {
               links.map(link => (
-                <li key={link.id}>
+                <li key={link.url}>
                   <Link to={link.url}>{link.text}</Link>
                 </li>
               ))
@@ -65,6 +65,12 @@ const NavContainer = styled.nav`
     display: none;
   }
 
+  /* The class is from CartButtons component */
+  .cart-btn-wrapper{
+      display: none;
+  }
+
+  
   /* FOR BIG SCREEN SIZE */
  @media (min-width: 900px) {
   .nav-center{

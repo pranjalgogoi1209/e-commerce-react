@@ -14,6 +14,15 @@ export default function Footer() {
 }
 
 const Wrapper = styled.footer`
+  /* FOR SMALL SCREEN */
+  background-color: black;
+  color: white;
+  height: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* FOR BIG SCREEN */
   @media (min-width:900px) {
     background-color: black;
     color: white;
