@@ -4,10 +4,10 @@ import { FaTimes } from 'react-icons/fa';
 import { links } from '../../utils/constants';
 import { Link } from 'react-router-dom'
 import CartButtons from './CartButtons';
-
+import { useState } from 'react';
 
 export default function Sidebar() {
-    const isOpen = true;
+    const [isOpen, setIsOpen] = useState(true)
 
     return (
       <SidebarContainer>
@@ -15,7 +15,7 @@ export default function Sidebar() {
 
           <div className='sidebar-header'>
             <div className='logo-head'></div>
-            <button className='close-btn'>
+            <button onClick={() => setIsOpen(prev => !prev)} className='close-btn'>
               <FaTimes/>
             </button>
           </div>
@@ -50,7 +50,6 @@ export default function Sidebar() {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      transition: var(--transition);
     }
     
     .logo-head{
@@ -68,7 +67,6 @@ export default function Sidebar() {
       border: none;
       cursor: pointer;
       color: red;
-      transition: var(--transition);
       &:hover {
         color: orange;
       }
@@ -87,7 +85,6 @@ export default function Sidebar() {
       a{
         text-decoration: none;
         color: red;
-        transition: var(--transition);
         &:hover{
           padding: 0 2vw;
           color: orange;
@@ -103,19 +100,21 @@ export default function Sidebar() {
     }
 
     .sidebar {
+      transition: 300ms;
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      transition: var(--transition);
       transform: translate(-100%);
-      z-index: -1;
+      z-index: 1;
     }
 
     .show-sidebar {
+      transition: 300ms;
       transform: translate(0);
-      z-index: 999;
+      z-index: 2;
+      background-color: white;
     }
  
 

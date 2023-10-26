@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { links } from '../../utils/constants'
 import CartButtons from './CartButtons'
 
-export default function Navbar() {
+export default function Navbar({setIsOpen}) {
     return (
       <NavContainer>
         <div className='nav-center'>
