@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom'
 import CartButtons from './CartButtons';
 import { useState } from 'react';
 
-export default function Sidebar() {
-    const [isOpen, setIsOpen] = useState(true)
+export default function Sidebar({isOpen, setIsOpen}) {
+    
 
     return (
       <SidebarContainer>

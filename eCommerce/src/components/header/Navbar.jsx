@@ -14,7 +14,7 @@ export default function Navbar({setIsOpen}) {
             <Link to='/'>
               <div className='logo'></div>
             </Link>
-            <button className='nav-toggle'>
+            <button onClick={() => setIsOpen(prev => !prev)} className='nav-toggle'>
               <FaBars/>
             </button>
           </div>
