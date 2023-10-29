@@ -1,11 +1,17 @@
 import React from 'react'
+import { useContext } from 'react'
+
+const productsContext = React.createContext()
 
 
-
-export default function productsProvider() {
+export default function ProductsProvider({children}) {
     return (
-      <div>
-        
-      </div>
+      <productsContext.Provider value="kaise hai">
+        {children}
+      </productsContext.Provider>
     )
   }
+
+export function useProductsContext(){
+  return useContext(productsContext)
+}

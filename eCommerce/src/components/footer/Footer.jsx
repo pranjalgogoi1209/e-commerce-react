@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useProductsContext } from '../../context/productsContext'
 
 export default function Footer() {
+  const kaiseHai = useProductsContext()
   return (
     <Wrapper>
       <h5>
@@ -9,6 +11,7 @@ export default function Footer() {
         <span>{new Date().getFullYear()}</span>
         <span> BuyS-Mart All rights reserved</span>
       </h5>
+      <h5>{kaiseHai}</h5>
     </Wrapper>
   )
 }
