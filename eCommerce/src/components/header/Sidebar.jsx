@@ -4,18 +4,20 @@ import { FaTimes } from 'react-icons/fa';
 import { links } from '../../utils/constants';
 import { Link } from 'react-router-dom'
 import CartButtons from './CartButtons';
-import { useState } from 'react';
+import useProductsContext from '../../context/products_context'
 
-export default function Sidebar({isOpen, setIsOpen}) {
-    
+export default function Sidebar() {
+    const {data} = useProductsContext()
+    console.log(data);
 
+    const isOpen = false;
     return (
       <SidebarContainer>
         <aside className={`${isOpen ? 'sidebar show-sidebar' : 'sidebar'}`}>
 
           <div className='sidebar-header'>
             <div className='logo-head'></div>
-            <button onClick={() => setIsOpen(prev => !prev)} className='close-btn'>
+            <button className='close-btn'>
               <FaTimes/>
             </button>
           </div>
