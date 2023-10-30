@@ -2,13 +2,16 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { FaShoppingCart, FaUserPlus } from 'react-icons/fa'
+import { useProductsContext } from '../../context/products_context';
 
 
 export default function CartButtons() {
+    const {closeSidebar} = useProductsContext()
+
     return (
       // We can add css of cart-btn-wrapper where we imported the CartButtons component
       <Wrapper className='cart-btn-wrapper'>
-        <Link to='/cart' className='cart-btn'>
+        <Link to='/cart' className='cart-btn' onClick={closeSidebar}>
           <p>Cart</p>
           <span className='cart-container'>
               <FaShoppingCart/>

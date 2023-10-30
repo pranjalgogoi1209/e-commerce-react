@@ -4,8 +4,10 @@ import {FaBars} from 'react-icons/fa'
 import styled from 'styled-components'
 import { links } from '../../utils/constants'
 import CartButtons from './CartButtons'
+import { useProductsContext } from '../../context/products_context';
 
-export default function Navbar({setIsOpen}) {
+export default function Navbar() {
+    const data = useProductsContext()
     return (
       <NavContainer>
         <div className='nav-center'>
@@ -14,7 +16,7 @@ export default function Navbar({setIsOpen}) {
             <Link to='/'>
               <div className='logo'></div>
             </Link>
-            <button onClick={() => setIsOpen(prev => !prev)} className='nav-toggle'>
+            <button onClick={data.openSidebar} className='nav-toggle'>
               <FaBars/>
             </button>
           </div>

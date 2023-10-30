@@ -10,7 +10,7 @@ import {
 const productsContext = React.createContext()
 
 const initialState = {
-  isSidebarOpen : false
+  isSidebarOpen : false,
 }
 
 // PRODUCTS PROVIDER
@@ -25,7 +25,7 @@ export default function ProductsProvider({children}) {
   }
 
   return (
-      <productsContext.Provider value={{}}>
+      <productsContext.Provider value={{...state, openSidebar, closeSidebar}}>
         {children}
       </productsContext.Provider>
   )
