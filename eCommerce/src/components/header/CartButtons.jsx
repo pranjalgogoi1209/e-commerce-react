@@ -7,7 +7,7 @@ import { useProductsContext } from '../../context/products_context';
 
 export default function CartButtons() {
     const {closeSidebar} = useProductsContext()
-
+    const num = 6
     return (
       // We can add css of cart-btn-wrapper where we imported the CartButtons component
       <Wrapper className='cart-btn-wrapper'>
@@ -15,7 +15,7 @@ export default function CartButtons() {
           <p>Cart</p>
           <span className='cart-container'>
               <FaShoppingCart/>
-              <span className='cart-value'>2</span>
+              <span className='cart-value'>{num}</span>
           </span>
         </Link>
 
@@ -62,7 +62,7 @@ const Wrapper = styled.div`
       height: 3vw;
       width: 3vw;
       border-radius: 100vw;
-      padding: 0.5vw;
+      padding: 0.8vw;
       z-index: 2;
       position: absolute;
       margin-left: 4vw;
@@ -106,8 +106,8 @@ const Wrapper = styled.div`
 
     .cart-container {
         display: flex;
-        width: 5vw;
-        height: 5vw;
+        width: 7vw;
+        height: 7vw;
         align-items: center;
         svg {
           font-size: 3vw;
@@ -117,14 +117,14 @@ const Wrapper = styled.div`
     }
 
     .cart-value {
-      background-color: pink;
+      background-color: yellow;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 1vw;
       width: 1vw;
       border-radius: 100vw;
-      padding: 0.5vw;
+      padding: 0.9vw;
       z-index: 2;
       position: absolute;
       margin-left: 2vw;
