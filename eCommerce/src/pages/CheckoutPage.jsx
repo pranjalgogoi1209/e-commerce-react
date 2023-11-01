@@ -1,5 +1,5 @@
 import React from 'react'
-import PageHero from '../components'
+import PageHero from '../components/header/PageHero'
 
 
 export default function CheckoutPage() {

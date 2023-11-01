@@ -1,6 +1,6 @@
 import Navbar from "./header/Navbar";
 import Sidebar from "./header/Sidebar";
-import PageHero from "./header/PageHero";
+import PageHero from "./header/PageHero"
 import Footer from "./footer/Footer";
 import Hero from "./home/Hero";
 import Contact from "./home/Contact";
