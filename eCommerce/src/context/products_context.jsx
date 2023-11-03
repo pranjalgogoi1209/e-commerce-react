@@ -5,7 +5,10 @@ import products_reducer from '../reducers/products_reducer'
 import { products_url as url} from '../utils/constants'
 import { 
   SIDEBAR_OPEN, 
-  SIDEBAR_CLOSE 
+  SIDEBAR_CLOSE ,
+  GET_PRODUCTS_BEGIN,
+  GET_PRODUCTS_SUCCESS,
+  GET_PRODUCTS_ERROR
 } from '../action'
 
 
@@ -34,8 +37,14 @@ export default function ProductsProvider({children}) {
   }
 
   const fetchProducts = async(url) => {
-    const response = await axios.get(url)
-    console.log(response.data);
+    dispatch({ type: GET_PRODUCTS_BEGIN })
+    try{
+      const response = await axios.get(url)
+      const products = response.data
+      dispatch({ type: GET_PRODUCTS_SUCCESS, payload: products })
+    } catch(error) {
+      dispatch({ type: GET_PRODUCTS_ERROR })
+    }
   }
 
   useEffect(() => {
