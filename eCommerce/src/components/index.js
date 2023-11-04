@@ -6,5 +6,21 @@ import Hero from "./home/Hero";
 import Contact from "./home/Contact";
 import FeaturedProducts from "./home/FeaturedProducts";
 import Services from "./home/Services";
+import Error from "./Error";
+import Loading from "./Loading";
+import Product from "./Product";
 
-export {Navbar, Sidebar,PageHero, Footer, Hero, Contact, FeaturedProducts, Services}
+
+export {
+    Navbar, 
+    Sidebar,
+    PageHero, 
+    Footer, 
+    Hero, 
+    Contact, 
+    FeaturedProducts, 
+    Services, 
+    Error,
+    Loading,
+    Product
+}

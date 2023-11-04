@@ -2,6 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { useProductsContext } from '../../context/products_context'
 import { Link } from 'react-router-dom'
+import { Error, Loading, Product } from '../'
+
+
 
 
 export default function FeaturedProducts() {
@@ -9,20 +12,28 @@ export default function FeaturedProducts() {
 
 
 
-
   return (
-    <Wrapper className='section'>
-      <div className='title'>
-        <h2>featured products</h2>
-        <div className='underline'></div>
-      </div>
-      <div className='section-center featured'>
-        {/* something */}
-      </div>
-      <Link to='/products' className='btn'>
-        all products
-      </Link>
-    </Wrapper>
+    <>
+      {loading && <Loading/>}
+      {error && <Error/>}
+      {
+        featured && 
+        <Wrapper className='section'>
+        <div className='title'>
+          <h2>featured products</h2>
+          <div className='underline'></div>
+        </div>
+        <div className='section-center featured'>
+          {
+            featured.map((product) => <Product key={product.id} {...product}/>)
+          }
+        </div>
+        <Link to='/products' className='btn'>
+          all products
+        </Link>
+      </Wrapper>
+      }
+    </>
     )
   }
 

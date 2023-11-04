@@ -22,7 +22,7 @@ const initialState = {
   products_loading: false,
   products_error: false,
   products: [],
-  featured_products: []
+  featured_products: null
 }
 
 // PRODUCTS PROVIDER

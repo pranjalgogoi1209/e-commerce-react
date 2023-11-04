@@ -1,0 +1,9 @@
+import React from 'react'
+
+export default function Error() {
+  return (
+    <div className='section section-center text-center'>
+      <h2>there was an error...</h2>
+    </div>
+  )
+}
