@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { formatPrice } from '../utils/helpers'
 import { FaSearch } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
@@ -16,7 +15,7 @@ export default function Product ({ image, name, price, id }) {
       </div>
       <footer>
         <h5>{name}</h5>
-        <p>{formatPrice(price)}</p>
+        <p>₹{price}.00</p>
       </footer>
     </Wrapper>
   )
